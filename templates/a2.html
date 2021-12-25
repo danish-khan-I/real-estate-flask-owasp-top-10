@@ -1,0 +1,37 @@
+{% extends 'layouts/base.html' %} {% block body %}
+<div class="mt-120 mb-4">
+  <div class="container">
+    <div class="w-50 m-auto contact_form">
+      <form class="row" action="/login/auth" method="POST">
+        <fieldset class="row-fluid">
+          <div class="form-group">
+            <label for="floatingInput">Username</label>
+            <input
+              type="text"
+              class="form-control"
+              id="floatingInput"
+              name="username"
+            />
+          </div>
+          <div class="form-group">
+            <label for="floatingPassword">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="floatingPassword"
+              name="password"
+            />
+          </div>
+          <div class="checkbox mb-3"></div>
+          <button
+            class="btn btn-light btn-radius btn-brd grd1 btn-block"
+            type="submit"
+          >
+            Login
+          </button>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
