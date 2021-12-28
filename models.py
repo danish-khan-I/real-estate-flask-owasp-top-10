@@ -20,7 +20,11 @@ def bootstrap():
         print("Database already pre-loaded...")
 
 def get_user_by_password(username, password):
-    return Users.query.filter_by(username=username, password=password).first()
+    # return Users.query.filter_by(username=username, password=password).first()
+    res = db.engine.execute("select * from `users` where username = '%s' and password = '%s'" % (username,password))
+    # for r in res:
+    #     print(r)
+    return res
 
 def get_user(username):
     return Users.query.filter_by(username=username).first()
