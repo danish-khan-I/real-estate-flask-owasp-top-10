@@ -20,7 +20,11 @@ bp = Blueprint(
 
 @bp.route("/login")
 def a2():
-    return render_template("a2.html")
+    if request.cookies.get("sessionId"):
+        response = make_response(redirect("/admin/welcome"))
+        return response
+    else:
+        return render_template("a2.html")
 
 @bp.route("/login/auth", methods=['POST'])
 def a2_auth():
