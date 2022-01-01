@@ -305,7 +305,76 @@
   <!-- Container end -->
 </section>
 <!-- Feature are end -->
+<section id="appointment" class="news">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-12">
+        <h2 class="section-title">Appointment</h2>
+        <h3 class="section-sub-title">Book an Appointment</h3>
+      </div>
+    </div>
+    <!--/ Title row end -->
 
+    <div class="row">
+      <form id="" action="/" method="post" role="form" class="w-100">
+        <div class="error-container"></div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Full Name</label>
+              <input
+                class="form-control form-control-name"
+                name="fullname"
+                id="name"
+                placeholder=""
+                type="text"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Budget</label>
+              <input
+                class="form-control form-control-subject"
+                name="budget"
+                id="subject"
+                placeholder=""
+                required
+              />
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Description</label>
+          <textarea
+            class="form-control form-control-message"
+            name="message"
+            id="message"
+            placeholder=""
+            rows="10"
+            required
+          ></textarea>
+        </div>
+        <div class="text-right">
+          <br />
+          <button class="btn btn-primary solid blank" type="submit">
+            Send Message
+          </button>
+        </div>
+      </form>
+    </div>
+    <!--/ Content row end -->
+    {% if fullname and budget %}
+    <div class="alert alert-success my-2">
+      Hi <b>{{ fullname }}</b> , We have got your appointment. We will contact
+      you shortly
+    </div>
+    {% endif %}
+  </div>
+  <!--/ Container end -->
+</section>
 <section id="facts" class="facts-area dark-bg">
   <div class="container">
     <div class="facts-wrapper">
@@ -1128,5 +1197,6 @@
   </div>
   <!--/ Container end -->
 </section>
+
 <!--/ News end -->
 {% endblock %}
