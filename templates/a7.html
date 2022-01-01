@@ -1,13 +1,11 @@
 {% extends 'layouts/base.html' %} {% block body %}
-<div class="mt-120 mb-4">
+<div class="my-4">
   <div class="container">
     <h2>Hello, {{ name }}</h2>
     <p class="alert alert-success">
       You have been subscribed for our weekly newsletter
     </p>
-    <hr />
-    <h3>Our recents blogs</h3>
-    <hr />
+
     {% include 'layouts/about-blog.html' %}
   </div>
 </div>

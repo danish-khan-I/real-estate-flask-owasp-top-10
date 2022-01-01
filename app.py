@@ -12,7 +12,10 @@ from pages import (
     a6,
     a7,
     a9,
-    pickle
+    pickle,
+    faq,
+    pricing,
+    contact
 )
 
 import models
@@ -35,6 +38,9 @@ app.register_blueprint(a9.bp, url_prefix="/owasp")
 app.register_blueprint(pages.bp)
 app.register_blueprint(auth.bp)
 app.register_blueprint(pickle.bp)
+app.register_blueprint(faq.bp)
+app.register_blueprint(pricing.bp)
+app.register_blueprint(contact.bp)
 
 ### Configure database
 app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///user.db"
