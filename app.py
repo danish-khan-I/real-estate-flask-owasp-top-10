@@ -15,7 +15,8 @@ from pages import (
     pickle,
     faq,
     pricing,
-    contact
+    contact,
+    insecure_log
 )
 
 import models
@@ -41,6 +42,7 @@ app.register_blueprint(pickle.bp)
 app.register_blueprint(faq.bp)
 app.register_blueprint(pricing.bp)
 app.register_blueprint(contact.bp)
+app.register_blueprint(insecure_log.bp)
 
 ### Configure database
 app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///user.db"
