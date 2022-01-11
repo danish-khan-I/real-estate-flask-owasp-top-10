@@ -16,7 +16,8 @@ from pages import (
     faq,
     pricing,
     contact,
-    insecure_log
+    insecure_log,
+    sitemap
 )
 
 import models
@@ -43,6 +44,7 @@ app.register_blueprint(faq.bp)
 app.register_blueprint(pricing.bp)
 app.register_blueprint(contact.bp)
 app.register_blueprint(insecure_log.bp)
+app.register_blueprint(sitemap.bp)
 
 ### Configure database
 app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///user.db"
